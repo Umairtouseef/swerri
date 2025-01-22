@@ -21,9 +21,9 @@ function SwerriToken() {
       <Grid item xs={12} md={12}
        sx={{
         padding: {
-          xs: "20px",
-          sm: "20px",
-          md: "20px",
+        //   xs: "20px",
+        //   sm: "20px",
+        //   md: "20px",
         },
       }}
       >
@@ -132,9 +132,9 @@ function SwerriToken() {
         <Grid item xs={12} md={12}
        sx={{
         padding: {
-          xs: "20px",
-          sm: "20px",
-          md: "20px",
+        //   xs: "20px",
+        //   sm: "20px",
+        //   md: "20px",
         },
       }}
       >
@@ -369,7 +369,7 @@ function SwerriToken() {
               textAlign: "left",
               fontWeight: 400,
               color: "rgba(37, 55, 63, 0.7)",
-              py: 1,
+            //   py: 1,
             }}
           >
             Swerri is a Decentralized Finance (DeFi) Protocol on the Binance
