@@ -45,7 +45,7 @@ function About() {
             {" "}
             <Typography
               sx={{
-                fontSize: { md: 58, xs: 25 },
+                fontSize: { md: 40, xs: 25 },
                 fontWeight: 800,
                 color: "#25373f",
               }}
@@ -55,7 +55,7 @@ function About() {
             </Typography>
             <Typography
               sx={{
-                fontSize: { md: 58, xs: 25 },
+                fontSize: { md: 40, xs: 25 },
                 fontWeight: 800,
                 color: "#785aec",
               }}

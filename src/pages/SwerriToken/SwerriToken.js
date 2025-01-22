@@ -18,7 +18,45 @@ function SwerriToken() {
       }}
     >
       <Grid container spacing={4} sx={{}}>
-
+      <Grid item xs={12} md={12}
+       sx={{
+        padding: {
+          xs: "20px",
+          sm: "20px",
+          md: "20px",
+        },
+      }}
+      >
+       <Typography
+            color={"black"}
+            sx={{
+              fontSize: { md: 48, xs: 25 },
+              textAlign: "left",
+            }}
+          >
+            {" "}
+            <Typography
+              sx={{
+                fontSize: { md: 40, xs: 25 },
+                fontWeight: 800,
+                color: "#25373f",
+              }}
+              component={"span"}
+            >
+             Swerri  Token  {" "}
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { md: 40, xs: 25 },
+                fontWeight: 800,
+                color: "#785aec",
+              }}
+              component={"span"}
+            >
+             SWET
+            </Typography>
+          </Typography>
+      </Grid>
       <Grid
           item
           xs={12}
@@ -30,35 +68,7 @@ function SwerriToken() {
             // paddingTop: "20px",
           }}
         >
-          <Typography
-            color={"black"}
-            sx={{
-              fontSize: { md: 48, xs: 25 },
-              textAlign: "left",
-            }}
-          >
-            {" "}
-            <Typography
-              sx={{
-                fontSize: { md: 58, xs: 25 },
-                fontWeight: 800,
-                color: "#25373f",
-              }}
-              component={"span"}
-            >
-             Swerri  Token  {" "}
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: { md: 58, xs: 25 },
-                fontWeight: 800,
-                color: "#785aec",
-              }}
-              component={"span"}
-            >
-             SWET
-            </Typography>
-          </Typography>
+          
 
           <Typography
             sx={{
@@ -66,7 +76,7 @@ function SwerriToken() {
               textAlign: "left",
               fontWeight: 400,
               color: "rgba(37, 55, 63, 0.7)",
-              py: 1,
+            //   py: 1,
             }}
           >
             Swerri is a Decentralized Finance (DeFi) Protocol on the Binance
@@ -97,7 +107,7 @@ function SwerriToken() {
               textAlign: "left",
               fontWeight: 400,
               color: "rgba(37, 55, 63, 0.7)",
-              py: 4,
+              py: 0,
             }}
           >
             Swerri is a Decentralized Finance (DeFi) Protocol on the Binance
@@ -118,6 +128,46 @@ function SwerriToken() {
             learn, lend and borrow.
           </Typography>
         </Grid>
+
+        <Grid item xs={12} md={12}
+       sx={{
+        padding: {
+          xs: "20px",
+          sm: "20px",
+          md: "20px",
+        },
+      }}
+      >
+       <Typography
+            color={"black"}
+            sx={{
+              fontSize: { md: 48, xs: 25 },
+              textAlign: "left",
+            }}
+          >
+            {" "}
+            <Typography
+              sx={{
+                fontSize: { md: 40, xs: 25 },
+                fontWeight: 800,
+                color: "#25373f",
+              }}
+              component={"span"}
+            >
+             Swerri  Token  {" "}
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { md: 40, xs: 25 },
+                fontWeight: 800,
+                color: "#785aec",
+              }}
+              component={"span"}
+            >
+             Utilities
+            </Typography>
+          </Typography>
+      </Grid>
         <Grid
           item
           xs={12}
@@ -129,35 +179,7 @@ function SwerriToken() {
             // paddingTop: "20px",
           }}
         >
-          <Typography
-            color={"black"}
-            sx={{
-              fontSize: { md: 48, xs: 25 },
-              textAlign: "left",
-            }}
-          >
-            {" "}
-            <Typography
-              sx={{
-                fontSize: { md: 58, xs: 25 },
-                fontWeight: 800,
-                color: "#25373f",
-              }}
-              component={"span"}
-            >
-             Swerri  Token  {" "}
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: { md: 58, xs: 25 },
-                fontWeight: 800,
-                color: "#785aec",
-              }}
-              component={"span"}
-            >
-             Utilities
-            </Typography>
-          </Typography>
+  
 
           <Typography
             sx={{
@@ -196,7 +218,7 @@ function SwerriToken() {
               textAlign: "left",
               fontWeight: 400,
               color: "rgba(37, 55, 63, 0.7)",
-              py: 4,
+            //   py: 4,
             }}
           >
             Swerri is a Decentralized Finance (DeFi) Protocol on the Binance
@@ -245,14 +267,14 @@ function SwerriToken() {
           <Typography
             color={"black"}
             sx={{
-              fontSize: { md: 48, xs: 25 },
+              fontSize: { md: 40, xs: 25 },
               textAlign: "left",
             }}
           >
             {" "}
             <Typography
               sx={{
-                fontSize: { md: 58, xs: 25 },
+                fontSize: { md: 50, xs: 25 },
                 fontWeight: 800,
                 color: "#25373f",
               }}
@@ -262,7 +284,7 @@ function SwerriToken() {
             </Typography>
             <Typography
               sx={{
-                fontSize: { md: 58, xs: 25 },
+                fontSize: { md: 40, xs: 25 },
                 fontWeight: 800,
                 color: "#785aec",
               }}
@@ -321,7 +343,7 @@ function SwerriToken() {
             {" "}
             <Typography
               sx={{
-                fontSize: { md: 58, xs: 25 },
+                fontSize: { md: 40, xs: 25 },
                 fontWeight: 800,
                 color: "#25373f",
               }}
@@ -331,7 +353,7 @@ function SwerriToken() {
             </Typography>
             <Typography
               sx={{
-                fontSize: { md: 58, xs: 25 },
+                fontSize: { md: 40, xs: 25 },
                 fontWeight: 800,
                 color: "#785aec",
               }}
