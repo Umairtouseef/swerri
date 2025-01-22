@@ -3,9 +3,22 @@ import Typography from "@mui/material/Typography";
 import { Box, Divider } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import { Grid } from "@mui/material";
+import ScrollReveal from "../../components/ScrollReveal";
 
 function SwerriToken() {
+
+    const animationVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.5, ease: "easeOut" },
+        },
+      };
   return (
+
+    <ScrollReveal animationVariants={animationVariants}>
+
     <Box
       component="main"
       sx={{
@@ -409,6 +422,7 @@ function SwerriToken() {
        
       </Grid>
     </Box>
+    </ScrollReveal>
   );
 }
 
