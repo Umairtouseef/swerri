@@ -13,18 +13,20 @@ function SecoundBanner() {
   return (
     <Box
       component="main"
-      sx={{
-        marginTop: "64px",
+       sx={{
         backgroundColor: "#e4defb",
-      }}
+    padding: {
+      xs: "20px",
+      sm: "50px 100px",
+      md: "100px 270px",
+
+    },
+  }}
     >
       <Grid
         container
         spacing={0}
-        sx={{
-          marginLeft: "270px",
-          marginRight: "270px",
-        }}
+       
       >
         <Grid item xs={12} md={2.5}
               sx={{

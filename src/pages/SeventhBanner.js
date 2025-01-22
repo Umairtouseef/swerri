@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Link, styled } from "@mui/material";
+import { Grid, Typography, Link, styled, Box } from "@mui/material";
 
 export default function Footer() {
   const Logo = styled("img")({
@@ -42,14 +42,20 @@ export default function Footer() {
   ];
 
   return (
-    <div
-      style={{
+    <Box
+      sx={{
         backgroundColor: "#7c4dff",
         color: "white",
-        padding: "100px 270px",
-      }}
+    padding: {
+      xs: "20px",
+      sm: "50px 100px",
+      md: "100px 270px",
+    },
+  }}
     >
-      <Grid container spacing={4}>
+      <Grid container spacing={4}
+      
+      >
         <Grid item xs={12} sm={3}>
           <Logo src="https://swerri.io/image/png/logo-dark.png" alt="Logo" />
           <Typography
@@ -102,6 +108,6 @@ export default function Footer() {
           </Grid>
         ))}
       </Grid>
-    </div>
+    </Box>
   );
 }

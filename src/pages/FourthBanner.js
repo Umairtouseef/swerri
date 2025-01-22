@@ -13,12 +13,14 @@ function FourthBanner() {
   return (
     <Box
          component="main"
-         sx={{
-           backgroundColor: "white",
-           padding: "100px 270px",
-           marginTop:"64px"
-
-         }}
+          sx={{
+    backgroundColor: "white",
+    padding: {
+      xs: "20px",
+      sm: "50px 100px",
+      md: "100px 270px",
+    },
+  }}
        >
          <Grid container spacing={4} >
            <Grid
@@ -155,6 +157,7 @@ function FourthBanner() {
     cursor: "pointer",
     textDecoration: "none", 
     transition: "color 0.3s ease", 
+    
     "&:hover": {
       color: "#5639db", 
       textDecoration: "underline", 

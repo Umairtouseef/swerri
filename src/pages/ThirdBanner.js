@@ -35,10 +35,15 @@ function ThirdBanner() {
   return (
     <Box
       component="main"
-      sx={{
+       sx={{
         backgroundColor: "#F9F9F9",
-        padding: "100px 270px",
-      }}
+
+    padding: {
+      xs: "20px",
+      sm: "50px 100px",
+      md: "100px 270px",
+    },
+  }}
     >
       <Grid container spacing={4} justifyContent="center">
         <Grid
@@ -64,7 +69,7 @@ function ThirdBanner() {
           <Grid
             key={item.id}
             item
-            xs={12}
+            xs={6}
             sm={6}
             md={2}
             display="flex"

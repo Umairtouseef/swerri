@@ -29,9 +29,13 @@ function SixthBanner() {
     <Box
       component="main"
       sx={{
-        backgroundColor: "white",
-        padding: "100px 270px",
-      }}
+    backgroundColor: "white",
+    padding: {
+      xs: "20px",
+      sm: "50px 100px",
+      md: "100px 270px",
+    },
+  }}
     >
       <Grid container spacing={4} justifyContent="center">
         <Grid
@@ -92,14 +96,12 @@ function SixthBanner() {
                 textTransform: "none",
                 borderRadius: "30px",
                 boxShadow: "0 10px 20px rgba(9, 154, 151, 0.6)",
-                height:"50px",
-                width:"150px",
-                fontWeight:"bold",
+                height: "50px",
+                width: "150px",
+                fontWeight: "bold",
                 "&:hover": {
-                    boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)",
-                   
-                  },
-
+                  boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.2)",
+                },
               }}
             >
               Google Play
@@ -113,13 +115,12 @@ function SixthBanner() {
                 textTransform: "none",
                 borderRadius: "30px",
                 boxShadow: "0 10px 20px rgba(120, 90, 236, 0.6)",
-                 height:"50px",
-                width:"150px",
-                fontWeight:"bold",
+                height: "50px",
+                width: "150px",
+                fontWeight: "bold",
                 "&:hover": {
-                    boxShadow: "0px 8px 16px rgba(121, 113, 241, 0.2)",
-                   
-                  },
+                  boxShadow: "0px 8px 16px rgba(121, 113, 241, 0.2)",
+                },
               }}
             >
               Web App

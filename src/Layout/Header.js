@@ -63,8 +63,11 @@ function ResponsiveAppBar() {
         <Toolbar
           disableGutters
           sx={{
-            marginLeft: "100px",
-            marginRight: "100px",
+            padding: {
+              xs: "20px",
+              sm: "50px 100px",
+              md: "50px 50px",
+            },
           }}
         >
           <Logo src="https://swerri.io/image/png/logo-dark.png" alt="Logo" />

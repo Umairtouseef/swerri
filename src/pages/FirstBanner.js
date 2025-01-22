@@ -46,12 +46,15 @@ function FirstBanner() {
     <Box
       component="main"
       sx={{
-        marginLeft: "270px",
-        marginRight: "270px",
-        marginTop: "64px",
+        backgroundColor: "white",
+        padding: {
+          xs: "20px",
+          sm: "50px 100px",
+          md: "100px 270px",
+        },
       }}
     >
-      <Grid container spacing={4} p={4} sx={{}}>
+      <Grid container spacing={4}  sx={{}}>
         <Grid
           item
           xs={12}
@@ -60,7 +63,7 @@ function FirstBanner() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            paddingTop: "20px",
+            // paddingTop: "20px",
           }}
         >
           <Typography
