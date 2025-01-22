@@ -91,14 +91,13 @@ function ResponsiveAppBar() {
             },
           }}
         >
-          {/* Logo */}
           <Link to="/" style={{ textDecoration: "none" }}>
             <Box
               component="img"
               src="https://swerri.io/image/png/logo-dark.png"
               alt="Logo"
               sx={{
-                height: { xs: "40px", md: "50px" },
+                height: { xs: "25px", md: "30px" },
                 cursor: "pointer",
                 "&:hover": {
                   filter: "brightness(0.8)",
@@ -107,7 +106,6 @@ function ResponsiveAppBar() {
             />
           </Link>
 
-          {/* Mobile Menu */}
           <Box
             sx={{
               flexGrow: 1,
@@ -188,7 +186,7 @@ function ResponsiveAppBar() {
                   );
                 }
                 const path =
-                  page === "Home"
+                  page === "home"
                     ? "/"
                     : `/${page.toLowerCase().replace(/\s+/g, "-")}`;
                 return (
@@ -332,7 +330,10 @@ function ResponsiveAppBar() {
                   </Box>
                 );
               } else {
-                const path = `/${page.toLowerCase().replace(/\s/g, "-")}`;
+                const path =
+                page === "home"
+                  ? "/"
+                  : `/${page.toLowerCase().replace(/\s+/g, "-")}`;
                 return (
                   <Button
                     key={page}
