@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -16,6 +16,7 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import CustomButton from "../components/CustomButton";
 import Grid from "@mui/material/Grid";
 import EmojiGrid from "../components/EmogiContainer";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const pages = ["Home", "Swerri", "SWET Token", "About Us"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -24,6 +25,9 @@ function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorElSwerri, setAnchorElSwerri] = React.useState(null);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const Logo = styled("img")({
     width: "100px",
@@ -31,9 +35,6 @@ function ResponsiveAppBar() {
     marginRight: "10px",
   });
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget);
   };
@@ -46,12 +47,32 @@ function ResponsiveAppBar() {
     setAnchorEl(null);
   };
 
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
+  const handleOpenSwerriMenu = (event) => {
+    setAnchorElSwerri(event.currentTarget);
+  };
+
+  const handleCloseSwerriMenu = () => {
+    setAnchorElSwerri(null);
+  };
+
+  
+  const isActive = (path) => location.pathname === path;
+  const handleNavigation = (path) => {
+    navigate(path);
+    handleCloseNavMenu();
+    handleCloseSwerriMenu();
   };
 
   return (
@@ -64,51 +85,129 @@ function ResponsiveAppBar() {
           disableGutters
           sx={{
             padding: {
-              xs: "20px",
-              sm: "50px 100px",
-              md: "50px 50px",
+              xs: "10px 20px",
+              sm: "20px 50px",
+              md: "20px 20px",
             },
           }}
         >
-          <Logo src="https://swerri.io/image/png/logo-dark.png" alt="Logo" />
+          {/* Logo */}
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <Box
+              component="img"
+              src="https://swerri.io/image/png/logo-dark.png"
+              alt="Logo"
+              sx={{
+                height: { xs: "40px", md: "50px" },
+                cursor: "pointer",
+                "&:hover": {
+                  filter: "brightness(0.8)",
+                },
+              }}
+            />
+          </Link>
 
+          {/* Mobile Menu */}
           <Box
             sx={{
               flexGrow: 1,
               display: { xs: "flex", md: "none" },
-              justifyContent: "center",
+              justifyContent: "flex-end",
             }}
           >
             <IconButton
               size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
+              aria-label="open navigation menu"
               onClick={handleOpenNavMenu}
-              color="inherit"
+              sx={{
+                color: "black",
+                "&:hover": {
+                  color: "#785AEC",
+                },
+              }}
             >
               <MenuIcon />
             </IconButton>
             <Menu
-              id="menu-appbar"
               anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
+              sx={{ display: { xs: "block", md: "none" } }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography sx={{ textAlign: "center" }}>{page}</Typography>
-                </MenuItem>
-              ))}
+              {pages.map((page) => {
+                if (page === "Swerri") {
+                  return (
+                    <Box key={page}>
+                      <MenuItem onClick={handleOpenSwerriMenu}>{page}</MenuItem>
+                      <Menu
+                        anchorEl={anchorElSwerri}
+                        open={Boolean(anchorElSwerri)}
+                        onClose={handleCloseSwerriMenu}
+                      >
+                        <MenuItem
+                          sx={{
+                            color: isActive("/swerri/what") ? "#785AEC" : "#262729",
+                            "&:hover": {
+                              fontWeight: 600,
+                              color: "#785AEC",
+                              backgroundColor: "transparent",
+                            },
+                          }}
+                          onClick={() => handleNavigation("/swerri/what")}
+                        >
+                          What is Swerri?
+                        </MenuItem>
+                        <MenuItem
+                          sx={{
+                            color: isActive("/swerri/circles") ? "#785AEC" : "#262729",
+                            "&:hover": {
+                              fontWeight: 600,
+                              color: "#785AEC",
+                              backgroundColor: "transparent",
+                            },
+                          }}
+                          onClick={() => handleNavigation("/swerri/circles")}
+                        >
+                          Swerri Circles
+                        </MenuItem>
+                        <MenuItem
+                          sx={{
+                            color: isActive("/swerri/master") ? "#785AEC" : "#262729",
+                            "&:hover": {
+                              fontWeight: 600,
+                              color: "#785AEC",
+                              backgroundColor: "transparent",
+                            },
+                          }}
+                          onClick={() => handleNavigation("/swerri/master")}
+                        >
+                          Swerri Master
+                        </MenuItem>
+                      </Menu>
+                    </Box>
+                  );
+                }
+                const path =
+                  page === "Home"
+                    ? "/"
+                    : `/${page.toLowerCase().replace(/\s+/g, "-")}`;
+                return (
+                  <MenuItem
+                    key={page}
+                    onClick={() => handleNavigation(path)}
+                    sx={{
+                      color: isActive(path) ? "#785AEC" : "#262729",
+                      "&:hover": {
+                        fontWeight: 600,
+                        color: "#785AEC",
+                        backgroundColor: "transparent",
+                      },
+                    }}
+                  >
+                    {page}
+                  </MenuItem>
+                );
+              })}
             </Menu>
           </Box>
           <Stack
@@ -163,26 +262,13 @@ function ResponsiveAppBar() {
                           marginLeft: "5px",
                           fontSize: "18px",
                           transition: "transform 0.3s ease",
-                          transform: Boolean(anchorEl)
-                            ? "rotate(180deg)"
-                            : "rotate(0deg)",
+                          transform: "rotate(0deg)",
                         }}
                       >
                         <ArrowDropDownIcon />
                       </Box>
                     </Button>
 
-                    <Box
-                      className="hover-effect"
-                      sx={{
-                        position: "absolute",
-                        bottom: "-4px",
-                        left: "0",
-                        height: "2px",
-                        width: "0%",
-                        transition: "width 0.3s ease",
-                      }}
-                    />
                     <Box
                       className="dropdown-menu"
                       sx={{
@@ -191,7 +277,7 @@ function ResponsiveAppBar() {
                         top: "100%",
                         left: "0",
                         zIndex: 10,
-                        backgroundColor: "transparent",
+                        backgroundColor: "white",
                         boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
                         borderRadius: "8px",
                         padding: "10px 0",
@@ -201,32 +287,44 @@ function ResponsiveAppBar() {
                     >
                       <MenuItem
                         sx={{
+                          color: isActive("/swerri/what")
+                            ? "#785AEC"
+                            : "INHERIT",
+
                           "&:hover": {
                             color: "#785AEC",
                             backgroundColor: "transparent",
                           },
                         }}
-                        onClick={handleCloseMenu}
+                        onClick={() => handleNavigation("/swerri/what")}
                       >
                         What is Swerri?
                       </MenuItem>
                       <MenuItem
                         sx={{
+                          color: isActive("/swerri/circles")
+                            ? "#785AEC"
+                            : "INHERIT",
+
                           "&:hover": {
                             color: "#785AEC",
                           },
                         }}
-                        onClick={handleCloseMenu}
+                        onClick={() => handleNavigation("/swerri/circles")}
                       >
                         Swerri Circles
                       </MenuItem>
                       <MenuItem
                         sx={{
+                          color: isActive("/swerri/master")
+                            ? "#785AEC"
+                            : "INHERIT",
+
                           "&:hover": {
                             color: "#785AEC",
                           },
                         }}
-                        onClick={handleCloseMenu}
+                        onClick={() => handleNavigation("/swerri/master")}
                       >
                         Swerri Master
                       </MenuItem>
@@ -234,11 +332,15 @@ function ResponsiveAppBar() {
                   </Box>
                 );
               } else {
+                const path = `/${page.toLowerCase().replace(/\s/g, "-")}`;
                 return (
                   <Button
                     key={page}
+                    onClick={() => handleNavigation(path)}
                     sx={{
-                      color: "#262729",
+                      color: isActive(path) ? "#785AEC" : "#262729",
+
+                      // color: "#262729",
                       display: "block",
                       fontSize: "16px",
                       fontWeight: 400,

@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import { useTheme } from "@mui/material/styles";
 import AppBarComponent from "./Header";
+import Footer from "./Footer";
 
 const MiniDrawer = ({ children }) => {
   const theme = useTheme();
@@ -33,6 +34,7 @@ const MiniDrawer = ({ children }) => {
       }}
       
       >{children}</Box>
+      <Footer/>
     </Box>
   );
 };

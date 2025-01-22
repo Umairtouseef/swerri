@@ -5,7 +5,7 @@ import { styled } from "@mui/system";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import EmojiGrid from "../components/EmogiContainer";
+import EmojiGrid from "../../components/EmogiContainer";
 import { Grid } from "@mui/material";
 
 import RecyclingOutlinedIcon from "@mui/icons-material/RecyclingOutlined";
@@ -138,7 +138,7 @@ function FirstBanner() {
           </Stack>
         </Grid>
 
-        <EmojiGrid img={require("../assets/intro-section.png")} />
+        <EmojiGrid img={require("../../assets/intro-section.png")} />
         {/*<Box
                   component={"img"}
                   sx={{

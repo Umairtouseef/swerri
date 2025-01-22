@@ -5,66 +5,34 @@ import { styled } from "@mui/system";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import EmojiGrid from "../components/EmogiContainer";
+import EmojiGrid from "../../components/EmogiContainer";
 import { Grid } from "@mui/material";
-import CustomButton from "../components/CustomButton";
+import CustomButton from "../../components/CustomButton";
 
 function SecoundBanner() {
   return (
     <Box
       component="main"
-       sx={{
+      sx={{
         backgroundColor: "#e4defb",
-    padding: {
-      xs: "20px",
-      sm: "50px 100px",
-      md: "100px 270px",
-
-    },
-  }}
+        padding: {
+          xs: "20px",
+          sm: "50px 100px",
+          md: "100px 270px",
+        },
+      }}
     >
-      <Grid
-        container
-        spacing={0}
-       
-      >
-        <Grid item xs={12} md={2.5}
-              sx={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "flex-start",
-                alignItems: "flex-start",
-              }}
-        >
-          <Box
-            sx={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center", 
-           
-            }}
-          >
-            <Box
-              component={"img"}
-              alt="logo"
-              src={require("../assets/front-mobile.png")}
-              sx={{
-                width: "100%",
-                objectFit: "contain",
-              }}
-            />
-          </Box>
-        </Grid>
-
-        <Grid item xs={12} md={2.5}
-         sx={{
-          width: "100%",
-          display: "flex",
-          justifyContent: "flex-end",
-          alignItems: "flex-end",
-        }}
-        
+      <Grid container spacing={0}>
+        <Grid
+          item
+          xs={12}
+          md={3}
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "flex-start",
+          }}
         >
           <Box
             sx={{
@@ -77,7 +45,38 @@ function SecoundBanner() {
             <Box
               component={"img"}
               alt="logo"
-              src={require("../assets/side-mobile.png")}
+              src={require("../../assets/front-mobile.png")}
+              sx={{
+                width: "100%",
+                objectFit: "contain",
+              }}
+            />
+          </Box>
+        </Grid>
+
+        <Grid
+          item
+          xs={12}
+          md={3}
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "flex-end",
+            alignItems: "flex-end",
+          }}
+        >
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Box
+              component={"img"}
+              alt="logo"
+              src={require("../../assets/side-mobile.png")}
               sx={{
                 width: "50%",
                 height: "50%",
@@ -90,25 +89,23 @@ function SecoundBanner() {
         <Grid
           item
           xs={12}
-          md={7}
+          md={6}
           sx={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            
+
             // paddingTop: "20px",
           }}
         >
           <Typography
             color={"black"}
             sx={{
-              fontSize: { md: 20, xs: 10 ,color:"#785aec",fontWeight:600},
+              fontSize: { md: 20, xs: 10, color: "#785aec", fontWeight: 600 },
               textAlign: "left",
             }}
           >
-           Introducing Swerri{" "}
-           <br />
-
+            Introducing Swerri <br />
             <Typography
               sx={{
                 fontSize: { md: 58, xs: 25 },
@@ -128,7 +125,7 @@ function SecoundBanner() {
               }}
               component={"span"}
             >
-             Simplify Crypto!
+              Simplify Crypto!
             </Typography>
           </Typography>
 
@@ -142,8 +139,6 @@ function SecoundBanner() {
             }}
           >
             Join together with friends in your community to Earn, Lend and
-
-
             <br />
             Borrow. Easily buy, convert and Send crypto on your phone.
           </Typography>
@@ -163,7 +158,7 @@ function SecoundBanner() {
                 color="white"
                 hoverbgcolor="#6a26da"
               />
-          </Box>
+            </Box>
           </Stack>
         </Grid>
       </Grid>

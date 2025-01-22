@@ -5,9 +5,9 @@ import { styled } from "@mui/system";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
-import EmojiGrid from "../components/EmogiContainer";
+import EmojiGrid from "../../components/EmogiContainer";
 import { Grid } from "@mui/material";
-import CustomButton from "../components/CustomButton";
+import CustomButton from "../../components/CustomButton";
 
 function FourthBanner() {
   return (
