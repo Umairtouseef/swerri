@@ -150,7 +150,7 @@ function FourthBanner() {
 
           <Typography
   sx={{
-    fontSize: "18px",
+    fontSize: { xs: "12px", md: "18px" },
     textAlign: "left",
     fontWeight: 400,
     color: "#785aec",
@@ -183,7 +183,8 @@ function FourthBanner() {
           </Typography>
           <Typography
   sx={{
-    fontSize: "18px",
+    fontSize: { xs: "12px", md: "18px" },
+
     textAlign: "left",
     fontWeight: 400,
     color: "#785aec",
