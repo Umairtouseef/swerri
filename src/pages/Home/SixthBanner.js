@@ -26,24 +26,25 @@ function SixthBanner() {
   ];
 
   return (
-    <Box
-      component="main"
-      sx={{
-    backgroundColor: "white",
-    padding: {
-      xs: "20px",
-      sm: "50px 100px",
-      md: "100px 270px",
-    },
-  }}
-    >
-      <Grid container spacing={4} justifyContent="center">
+   <Box component="main" sx={{}}>
+        <Grid
+          container
+          spacing={4}
+          sx={{
+            backgroundColor: "white",
+            padding: {
+              xs: "10px 20px",
+              sm: "20px 50px",
+              md: "70px 270px",
+            },
+          }}
+        >
         <Grid
           item
           xs={12}
           sx={{
             textAlign: "center",
-            paddingBottom: "20px",
+            // paddingBottom: "20px",
           }}
         >
           <Typography

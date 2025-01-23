@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
-import { MenuItem, Stack } from "@mui/material";
+import { Grid2, MenuItem, Stack } from "@mui/material";
 import { Download } from "@mui/icons-material";
 import { styled } from "@mui/system";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
@@ -67,7 +67,6 @@ function ResponsiveAppBar() {
     setAnchorElSwerri(null);
   };
 
-  
   const isActive = (path) => location.pathname === path;
   const handleNavigation = (path) => {
     navigate(path);
@@ -78,16 +77,34 @@ function ResponsiveAppBar() {
   return (
     <AppBar
       position="static"
-      sx={{ backgroundColor: "white", boxShadow: "none" }}
+      sx={{ backgroundColor: "white", boxShadow: "none",
+        // width:"auto",
+        padding: {
+          xs: "10px 20px",
+          sm: "20px 50px",
+          md: "20px 270px",
+        },
+
+       }}
     >
-      <Container maxWidth="xl">
+      {/* <Grid
+        container
+        sx={{
+          padding: {
+            xs: "10px 20px",
+            sm: "20px 50px",
+            md: "20px 20px",
+          },
+        }}
+      > */}
         <Toolbar
           disableGutters
           sx={{
             padding: {
-              xs: "10px 20px",
-              sm: "20px 50px",
-              md: "20px 20px",
+              // xs: "10px 20px",
+              // sm: "20px 50px",
+              // md: "20px 20px",
+              width: "100%",
             },
           }}
         >
@@ -144,7 +161,9 @@ function ResponsiveAppBar() {
                       >
                         <MenuItem
                           sx={{
-                            color: isActive("/swerri/what") ? "#785AEC" : "#262729",
+                            color: isActive("/swerri/what")
+                              ? "#785AEC"
+                              : "#262729",
                             "&:hover": {
                               fontWeight: 600,
                               color: "#785AEC",
@@ -157,7 +176,9 @@ function ResponsiveAppBar() {
                         </MenuItem>
                         <MenuItem
                           sx={{
-                            color: isActive("/swerri/circles") ? "#785AEC" : "#262729",
+                            color: isActive("/swerri/circles")
+                              ? "#785AEC"
+                              : "#262729",
                             "&:hover": {
                               fontWeight: 600,
                               color: "#785AEC",
@@ -170,7 +191,9 @@ function ResponsiveAppBar() {
                         </MenuItem>
                         <MenuItem
                           sx={{
-                            color: isActive("/swerri/master") ? "#785AEC" : "#262729",
+                            color: isActive("/swerri/master")
+                              ? "#785AEC"
+                              : "#262729",
                             "&:hover": {
                               fontWeight: 600,
                               color: "#785AEC",
@@ -331,9 +354,9 @@ function ResponsiveAppBar() {
                 );
               } else {
                 const path =
-                page === "home"
-                  ? "/"
-                  : `/${page.toLowerCase().replace(/\s+/g, "-")}`;
+                  page === "home"
+                    ? "/"
+                    : `/${page.toLowerCase().replace(/\s+/g, "-")}`;
                 return (
                   <Button
                     key={page}
@@ -364,9 +387,24 @@ function ResponsiveAppBar() {
             })}
           </Stack>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Download App">
-              <CustomButton
+          <Stack
+      direction="row"
+      spacing={2} 
+      sx={{ flexGrow: 0 }}
+    >
+      <Tooltip title="Download App">
+      {/* <CustomButton
+                title="Launch App"
+                MFontSize="15px"
+                width="100%"
+                bgColor="#785aec"
+                color="white"
+                hoverbgcolor="#6a26da"
+              /> */}
+      </Tooltip>
+
+      <Tooltip title="Learn More">
+      <CustomButton
                 title="Download App"
                 MFontSize="15px"
                 width="100%"
@@ -374,10 +412,10 @@ function ResponsiveAppBar() {
                 color="white"
                 hoverbgcolor="#6a26da"
               />
-            </Tooltip>
-          </Box>
+      </Tooltip>
+    </Stack>
         </Toolbar>
-      </Container>
+      {/* </Grid> */}
     </AppBar>
   );
 }

@@ -24,9 +24,11 @@ const MiniDrawer = ({ children }) => {
         flexDirection: "column",
         backgroundColor: "",
         width: "100%",
+        // justifyContent:"center",
+        // alignItems:"center"
       }}
     >
-      <CssBaseline />
+      {/* <CssBaseline /> */}
       <AppBarComponent open={open} handleDrawerClose={handleDrawerClose} />
       <Box component="main"
       sx={{

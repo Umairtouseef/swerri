@@ -42,20 +42,24 @@ export default function Footer() {
   ];
 
   return (
-    <Box
-      sx={{
-        backgroundColor: "#7c4dff",
-        color: "white",
-    padding: {
-      xs: "20px",
-      sm: "50px 100px",
-      md: "100px 270px",
-    },
-  }}
-    >
-      <Grid container spacing={4}
+     <Box component="main" sx={{
+      backgroundColor: "#7c4dff",
+
+
+     }}>
+          <Grid
+            container
+            spacing={4}
+            sx={{
+              padding: {
+                xs: "10px 20px",
+                sm: "20px 50px",
+                md: "20px 270px",
+              },
+            }}
+          >
       
-      >
+      
         <Grid item xs={12} sm={3}>
           <Logo src="https://swerri.io/image/png/logo-dark.png" alt="Logo" />
           <Typography

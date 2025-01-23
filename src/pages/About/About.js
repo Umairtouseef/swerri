@@ -13,9 +13,9 @@ function About() {
         sx={{
           backgroundColor: "white",
           padding: {
-            xs: "20px",
-            sm: "50px 100px",
-            md: "100px 270px",
+            xs: "10px 20px",
+            sm: "20px 50px",
+            md: "20px 270px",
           },
         }}
       >
@@ -28,11 +28,11 @@ function About() {
             flexDirection: "column",
             justifyContent: "center",
             backgroundColor: "white",
-            padding: {
-              xs: "20px",
-              sm: "50px 100px",
-              md: "100px 270px",
-            },
+            // padding: {
+            //   xs: "20px",
+            //   sm: "50px 100px",
+            //   md: "100px 270px",
+            // },
           }}
         >
           <Typography
@@ -101,16 +101,18 @@ function About() {
         </Grid>
       </Grid>
 
-    
-      <Grid item xs={12} md={12}
-       sx={{
-        backgroundColor: "#F9F9F9",
-        padding: {
-          xs: "20px",
-          sm: "20px",
-          md: "20px",
-        },
-      }}
+      <Grid
+        item
+        xs={12}
+        md={12}
+        sx={{
+          backgroundColor: "#F9F9F9",
+          padding: {
+            xs: "20px",
+            sm: "20px",
+            md: "20px",
+          },
+        }}
       >
         <Typography
           color={"black"}
@@ -141,6 +143,10 @@ function About() {
             xs: "20px",
             sm: "50px 100px",
             md: "100px 270px",
+            justifyContent: "center",
+            alignItems: "center",
+
+
           },
         }}
       >
@@ -160,6 +166,62 @@ function About() {
           item
           xs={12}
           md={6}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            // paddingTop: "20px",
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: "18px",
+              textAlign: "left",
+              fontWeight: 400,
+              color: "rgba(37, 55, 63, 0.7)",
+              py: 1,
+            }}
+          >
+            
+              <Typography
+                sx={{
+                  fontSize: { md: 20, xs: 25 },
+                  fontWeight: 800,
+                  color: "#785aec",
+                }}
+                component={"span"}
+              >
+                Nick Mwendwa
+              </Typography>
+              <br/>
+            {/* </Typography> */}
+            Founder & CEO
+            <br />
+            Nick is an Enterpreneur and Tech enthusiast. He founded Riverbank
+            Solutions Ltd, a Fintech solutions
+            <br />
+            provider 13 years ago providing payment solutions and creating
+            <br />
+            great teams that have delivered in the areas of financial inclusion
+          
+          </Typography>
+        </Grid>
+        <Grid item xs={12} md={3}>
+          <Box
+            sx={{
+              width: "100%",
+              margin: "auto",
+              display: "block",
+            }}
+            component={"img"}
+            alt="logo"
+            src={require("../../assets/mwendwa.jpg")}
+          />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={3}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -193,7 +255,7 @@ function About() {
               }}
               component={"span"}
             >
-              Nick Mwendwa
+              Lynda Ambiyo
             </Typography>
           </Typography>
 
@@ -206,23 +268,83 @@ function About() {
               py: 1,
             }}
           >
-            Founder & CEO
+            COO
             <br />
             Nick is an Enterpreneur and Tech enthusiast. He founded Riverbank
             Solutions Ltd, a Fintech solutions
             <br />
-            provider 13 years ago providing payment solutions and creating
-            <br />
-            great teams that have delivered in the areas of financial inclusion
-            <br />
-            allows members to create a circle of friends and transact in crypto
-            <br />
-            together. On Swerri a member can lend, borrow and earn from trading
-            together. They can also buy, convert, Pay and send crypto.
-            <br />
-            learn, lend and borrow.
           </Typography>
         </Grid>
+        <Grid item xs={12} md={3}>
+          <Box
+            sx={{
+              width: "100%",
+              margin: "auto",
+              display: "block",
+            }}
+            component={"img"}
+            alt="logo"
+            src={require("../../assets/mwendwa.jpg")}
+          />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={3}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            // paddingTop: "20px",
+          }}
+        >
+          <Typography
+            color={"black"}
+            sx={{
+              fontSize: { md: 48, xs: 25 },
+              textAlign: "left",
+            }}
+          >
+            {" "}
+            <Typography
+              sx={{
+                fontSize: { md: 20, xs: 25 },
+                fontWeight: 800,
+                color: "#25373f",
+              }}
+              component={"span"}
+            >
+              {" "}
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: { md: 20, xs: 25 },
+                fontWeight: 800,
+                color: "#785aec",
+              }}
+              component={"span"}
+            >
+              Lynda Ambiyo
+            </Typography>
+          </Typography>
+
+          <Typography
+            sx={{
+              fontSize: "18px",
+              textAlign: "left",
+              fontWeight: 400,
+              color: "rgba(37, 55, 63, 0.7)",
+              py: 1,
+            }}
+          >
+            CFO
+            <br />
+            Nick is an Enterpreneur and Tech enthusiast. He founded Riverbank
+            Solutions Ltd, a Fintech solutions
+            <br />
+          </Typography>
+        </Grid>
+
         <Grid item xs={12} md={3}>
           <Box
             sx={{
