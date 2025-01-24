@@ -365,7 +365,7 @@ function ResponsiveAppBar() {
                       color: isActive(path) ? "#785AEC" : "#262729",
 
                       // color: "#262729",
-                      display: "block",
+                      // display: "block",
                       fontSize: "16px",
                       fontWeight: 400,
                       fontStyle: "normal",
@@ -373,6 +373,7 @@ function ResponsiveAppBar() {
                       lineHeight: 1.75,
                       textTransform: "none",
                       transition: "color 0.3s ease, transform 0.3s ease",
+                      minWidth: "150px",
                       "&:hover": {
                         fontWeight: 600,
                         color: "#785AEC",

@@ -6,7 +6,7 @@ import { Grid } from "@mui/material";
 
 function About() {
   return (
-    <Box component="main" sx={{}}>
+    <Box component="main" sx={{ flexGrow: 1 }}>
       <Grid
         container
         spacing={4}
@@ -22,7 +22,7 @@ function About() {
         <Grid
           item
           xs={12}
-          md={7}
+          md={5}
           sx={{
             display: "flex",
             flexDirection: "column",
@@ -76,18 +76,18 @@ function About() {
           >
             Swerri is a Decentralized Finance (DeFi) Protocol on the Binance
             Smart Chain Blockchain which combines the power of DeFi in crypto
-            <br />
+            {/* <br /> */}
             and the functionalities of a decentralized exchange. Swerri App
-            <br />
+            {/* <br /> */}
             allows members to create a circle of friends and transact in crypto
             together. On Swerri a member can lend, borrow and earn from trading
             together. They can also buy, convert, Pay and send crypto.
-            <br />
+            {/* <br /> */}
             learn, lend and borrow.
           </Typography>
         </Grid>
 
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={7}>
           <Box
             sx={{
               width: "100%",
@@ -102,16 +102,31 @@ function About() {
       </Grid>
 
       <Grid
+        container
+        spacing={4}
+        sx={{
+          backgroundColor: "#F9F9F9",
+          padding: {
+            xs: "20px",
+            sm: "50px 100px",
+            md: "100px 270px",
+            justifyContent: "center",
+            alignItems: "center",
+          },
+        }}
+      >
+        
+      <Grid
         item
         xs={12}
         md={12}
         sx={{
           backgroundColor: "#F9F9F9",
-          padding: {
-            xs: "20px",
-            sm: "20px",
-            md: "20px",
-          },
+          // padding: {
+          //   xs: "20px",
+          //   sm: "20px",
+          //   md: "20px",
+          // },
         }}
       >
         <Typography
@@ -134,22 +149,6 @@ function About() {
           </Typography>
         </Typography>
       </Grid>
-      <Grid
-        container
-        spacing={4}
-        sx={{
-          backgroundColor: "#F9F9F9",
-          padding: {
-            xs: "20px",
-            sm: "50px 100px",
-            md: "100px 270px",
-            justifyContent: "center",
-            alignItems: "center",
-
-
-          },
-        }}
-      >
         <Grid item xs={12} md={6}>
           <Box
             sx={{
@@ -182,18 +181,17 @@ function About() {
               py: 1,
             }}
           >
-            
-              <Typography
-                sx={{
-                  fontSize: { md: 20, xs: 25 },
-                  fontWeight: 800,
-                  color: "#785aec",
-                }}
-                component={"span"}
-              >
-                Nick Mwendwa
-              </Typography>
-              <br/>
+            <Typography
+              sx={{
+                fontSize: { md: 20, xs: 25 },
+                fontWeight: 800,
+                color: "#785aec",
+              }}
+              component={"span"}
+            >
+              Nick Mwendwa
+            </Typography>
+            <br />
             {/* </Typography> */}
             Founder & CEO
             <br />
@@ -203,7 +201,6 @@ function About() {
             provider 13 years ago providing payment solutions and creating
             <br />
             great teams that have delivered in the areas of financial inclusion
-          
           </Typography>
         </Grid>
         <Grid item xs={12} md={3}>
