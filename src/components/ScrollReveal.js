@@ -19,12 +19,14 @@ const ScrollReveal = ({ children, animationVariants, threshold = 0.2 }) => {
       observer.observe(containerRef.current);
     }
 
-    return () => {
+    return () => { 
       if (containerRef.current) {
         observer.unobserve(containerRef.current);
       }
-    };
+    }; 
   }, [threshold]);
+  
+
 
   return (
     <motion.div

@@ -17,6 +17,7 @@ import CustomButton from "../components/CustomButton";
 import Grid from "@mui/material/Grid";
 import EmojiGrid from "../components/EmogiContainer";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { getGridStyles } from "../components/gridStyles";
 
 const pages = ["Home", "Swerri", "SWET Token", "About Us"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -77,24 +78,19 @@ function ResponsiveAppBar() {
   return (
     <AppBar
       position="static"
-      sx={{ backgroundColor: "white", boxShadow: "none",
-        // width:"auto",
-        padding: {
-          xs: "10px 20px",
-          sm: "20px 50px",
-          md: "20px 270px",
-        },
+      sx={{
+        backgroundColor: "white",
+        boxShadow: "none",
+        width:"auto",
+        ...getGridStyles({ marginTop: 0,marginBottom: 0 }),
 
-       }}
+      }}
     >
       {/* <Grid
         container
+        spacing={4}
         sx={{
-          padding: {
-            xs: "10px 20px",
-            sm: "20px 50px",
-            md: "20px 20px",
-          },
+          ...getGridStyles({ marginTop: 1 }),
         }}
       > */}
         <Toolbar
@@ -237,7 +233,7 @@ function ResponsiveAppBar() {
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
-              marginLeft: "64px",
+              marginLeft: "24px",
             }}
           >
             {pages.map((page) => {
@@ -373,9 +369,9 @@ function ResponsiveAppBar() {
                       lineHeight: 1.75,
                       textTransform: "none",
                       transition: "color 0.3s ease, transform 0.3s ease",
-                      minWidth: "150px",
+                      minWidth: "50px",
                       "&:hover": {
-                        fontWeight: 600,
+                        fontWeight: 400,
                         color: "#785AEC",
                         backgroundColor: "transparent",
                       },
@@ -388,13 +384,9 @@ function ResponsiveAppBar() {
             })}
           </Stack>
 
-          <Stack
-      direction="row"
-      spacing={2} 
-      sx={{ flexGrow: 0 }}
-    >
-      <Tooltip title="Download App">
-      {/* <CustomButton
+          <Stack direction="row" spacing={2} sx={{ flexGrow: 0 }}>
+            <Tooltip title="Download App">
+              {/* <CustomButton
                 title="Launch App"
                 MFontSize="15px"
                 width="100%"
@@ -402,10 +394,10 @@ function ResponsiveAppBar() {
                 color="white"
                 hoverbgcolor="#6a26da"
               /> */}
-      </Tooltip>
+            </Tooltip>
 
-      <Tooltip title="Learn More">
-      <CustomButton
+            <Tooltip title="Learn More">
+              <CustomButton
                 title="Download App"
                 MFontSize="15px"
                 width="100%"
@@ -413,8 +405,8 @@ function ResponsiveAppBar() {
                 color="white"
                 hoverbgcolor="#6a26da"
               />
-      </Tooltip>
-    </Stack>
+            </Tooltip>
+          </Stack>
         </Toolbar>
       {/* </Grid> */}
     </AppBar>

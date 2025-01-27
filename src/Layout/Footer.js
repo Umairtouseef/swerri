@@ -1,5 +1,6 @@
 import React from "react";
 import { Grid, Typography, Link, styled, Box } from "@mui/material";
+import { getGridStyles } from "../components/gridStyles";
 
 export default function Footer() {
   const Logo = styled("img")({
@@ -42,22 +43,11 @@ export default function Footer() {
   ];
 
   return (
-     <Box component="main" sx={{
+      <Box component="main" sx={{ flexGrow: 1, display: "flex",
       backgroundColor: "#7c4dff",
 
-
-     }}>
-          <Grid
-            container
-            spacing={4}
-            sx={{
-              padding: {
-                xs: "10px 20px",
-                sm: "20px 50px",
-                md: "20px 270px",
-              },
-            }}
-          >
+       }}>
+           <Grid container spacing={4} sx={getGridStyles()}>
       
       
         <Grid item xs={12} sm={3}>

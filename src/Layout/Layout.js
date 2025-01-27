@@ -26,9 +26,10 @@ const MiniDrawer = ({ children }) => {
         width: "100%",
         // justifyContent:"center",
         // alignItems:"center"
+        overflow:"hidden"
       }}
     >
-      {/* <CssBaseline /> */}
+      <CssBaseline />
       <AppBarComponent open={open} handleDrawerClose={handleDrawerClose} />
       <Box component="main"
       sx={{

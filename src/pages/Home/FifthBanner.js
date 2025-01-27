@@ -11,6 +11,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SickIcon from "@mui/icons-material/Sick";
 import TelegramIcon from "@mui/icons-material/Telegram";
+import { getGridStyles } from "../../components/gridStyles";
 
 function FifthBanner() {
   
@@ -32,19 +33,11 @@ function FifthBanner() {
   ];
 
   return (
-    <Box
-      component="main"
-      sx={{
-        backgroundColor: "#F9F9F9",
+    <Box component="main" sx={{ flexGrow: 1, display: "flex",
+      backgroundColor: "#F9F9F9",
 
-    padding: {
-      xs: "20px",
-      sm: "50px 100px",
-      md: "100px 270px",
-    },
-  }}
-    >
-      <Grid container spacing={4} justifyContent="center">
+     }}>
+          <Grid container spacing={4} sx={getGridStyles()}>
         <Grid
           item
           xs={12}

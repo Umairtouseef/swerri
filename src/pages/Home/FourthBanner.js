@@ -8,22 +8,12 @@ import Stack from "@mui/material/Stack";
 import EmojiGrid from "../../components/EmogiContainer";
 import { Grid } from "@mui/material";
 import CustomButton from "../../components/CustomButton";
+import { getGridStyles } from "../../components/gridStyles";
 
 function FourthBanner() {
   return (
-  <Box component="main" sx={{}}>
-       <Grid
-         container
-         spacing={4}
-         sx={{
-           backgroundColor: "white",
-           padding: {
-             xs: "10px 20px",
-             sm: "20px 50px",
-             md: "20px 270px",
-           },
-         }}
-       >
+  <Box component="main" sx={{ flexGrow: 1, display: "flex" }}>
+        <Grid container spacing={4} sx={getGridStyles()}>
            <Grid
              item
              xs={12}
@@ -150,7 +140,7 @@ function FourthBanner() {
 
           <Typography
   sx={{
-    fontSize: { xs: "12px", md: "18px" },
+    fontSize: { xs: "14px", lg: "18px" },
     textAlign: "left",
     fontWeight: 400,
     color: "#785aec",
@@ -183,7 +173,7 @@ function FourthBanner() {
           </Typography>
           <Typography
   sx={{
-    fontSize: { xs: "12px", md: "18px" },
+    fontSize: { xs: "14px", lg: "18px" },
 
     textAlign: "left",
     fontWeight: 400,

@@ -3,22 +3,12 @@ import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import { Grid } from "@mui/material";
+import { getGridStyles } from "../../components/gridStyles";
 
 function SwerriCircle() {
   return (
-       <Box component="main" sx={{}}>
-          <Grid
-            container
-            spacing={4}
-            sx={{
-              backgroundColor: "white",
-              padding: {
-                xs: "10px 20px",
-                sm: "20px 50px",
-                md: "20px 270px",
-              },
-            }}
-          >
+        <Box component="main" sx={{ flexGrow: 1, display: "flex" }}>
+             <Grid container spacing={4} sx={getGridStyles()}>
         <Grid
           item
           xs={12}

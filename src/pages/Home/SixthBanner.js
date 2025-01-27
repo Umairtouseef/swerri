@@ -8,6 +8,7 @@ import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { PlayArrow } from "@mui/icons-material";
+import { getGridStyles } from "../../components/gridStyles";
 
 function SixthBanner() {
   const icons = [
@@ -26,19 +27,8 @@ function SixthBanner() {
   ];
 
   return (
-   <Box component="main" sx={{}}>
-        <Grid
-          container
-          spacing={4}
-          sx={{
-            backgroundColor: "white",
-            padding: {
-              xs: "10px 20px",
-              sm: "20px 50px",
-              md: "70px 270px",
-            },
-          }}
-        >
+  <Box component="main" sx={{ flexGrow: 1, display: "flex" }}>
+        <Grid container spacing={4} sx={getGridStyles()}>
         <Grid
           item
           xs={12}

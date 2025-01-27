@@ -5,9 +5,9 @@ import Home from "./pages/Home";
 import WhatSwerri from "./pages/Swerri/What";
 import SwerriCircle from "./pages/Swerri/Circles";
 import SwerriMaster from "./pages/Swerri/Master";
-import SwerriToken from "./pages/SwerriToken/SwerriToken";
-import About from "./pages/About/About";
+import About from "./pages/About";
 import Loader from "./components/Loader";
+import SwerriToken from './pages/SwerriToken/SwerriToken';
 
 const pageVariants = {
   initial: { opacity: 0, y: 50 },

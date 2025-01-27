@@ -12,13 +12,14 @@ import RecyclingOutlinedIcon from "@mui/icons-material/RecyclingOutlined";
 import SellOutlinedIcon from "@mui/icons-material/SellOutlined";
 import InventoryOutlinedIcon from "@mui/icons-material/InventoryOutlined";
 import TollOutlinedIcon from "@mui/icons-material/TollOutlined";
+import { getGridStyles } from "../../components/gridStyles";
 
 function FirstBanner() {
   const CircleBox = styled(Box)(({ theme }) => ({
-    width: "60px",
-    height: "60px",
+    width: { xs: "30px", md: "60px" },
+    height:{ xs: "30px", md: "60px" },
     borderRadius: "50%",
-    backgroundColor: "#e4defb",
+    // backgroundColor: "#e4defb",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -43,18 +44,8 @@ function FirstBanner() {
   ];
 
   return (
-    <Box
-      component="main"
-      sx={{
-        backgroundColor: "white",
-        padding: {
-          xs: "20px",
-          sm: "50px 100px",
-          md: "100px 270px",
-        },
-      }}
-    >
-      <Grid container spacing={4}  sx={{}}>
+    <Box component="main" sx={{ flexGrow: 1, display: "flex" }}>
+      <Grid container spacing={4} sx={getGridStyles()}>
         <Grid
           item
           xs={12}
@@ -114,8 +105,8 @@ function FirstBanner() {
           <Stack
             py={4}
             direction={"row"}
-            spacing={2}
-            sx={{ justifyContent: { xs: "center", md: "flex-start" } }}
+            spacing={4}
+            sx={{ justifyContent: { xs: "center", md: "center" } }}
           >
             {icons.map((item) => (
               <Grid

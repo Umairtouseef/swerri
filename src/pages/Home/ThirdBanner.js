@@ -11,6 +11,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SickIcon from "@mui/icons-material/Sick";
 import TelegramIcon from "@mui/icons-material/Telegram";
+import { getGridStyles } from "../../components/gridStyles";
 
 function ThirdBanner() {
   
@@ -33,29 +34,23 @@ function ThirdBanner() {
   ];
 
   return (
-    <Box
-      component="main"
-       sx={{
-        backgroundColor: "#F9F9F9",
-
-    padding: {
-      xs: "20px",
-      sm: "50px 100px",
-      md: "100px 270px",
-    },
-  }}
-    >
-      <Grid container spacing={4} justifyContent="center">
+     <Box component="main" sx={{ flexGrow: 1, display: "flex" ,
+      backgroundColor: "#F9F9F9",
+      
+     }}>
+           <Grid container spacing={4} sx={getGridStyles()}>
         <Grid
           item
           xs={12}
           sx={{
             textAlign: "center",
-            paddingBottom: "20px",
+            // paddingBottom: "20px",
           }}
         >
           <Typography
             color={"#785aec"}
+            textAlign= "center"
+
             sx={{
               fontSize: { md: 20, xs: 16 },
               fontWeight: 600,
